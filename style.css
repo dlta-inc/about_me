@@ -1,5 +1,11 @@
+* {
+   background-color: black;
+   margin: 0;
+}
 h1 {
-  font-family: fantasy;
-  color: #1ed1bf;
+  font-family: 'Allura', cursive;
+  color: white;
   font-size: 120x%;
+  background: linear-gradient(angle, color-stop1, color-stop2);
+  position: absolute;
 }
