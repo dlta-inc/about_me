@@ -1,11 +1,23 @@
 * {
-   background-color: black;
+   background-color: #40295E;
    margin: 0;
 }
 h1 {
-  font-family: 'Allura', cursive;
+   font-family: 'Bookman Old Style' sans-serif;
   color: white;
-  font-size: 120x%;
-  background: linear-gradient(angle, color-stop1, color-stop2);
-  position: absolute;
+  font-size: 200%;
+  background color: #888A8A;
+  border-style: groove;
+  text-align: center;
+  padding: 15px;
+  margin: 0px;
+}
+
+
+p {
+   border: bold;
+   background-color: #B8F2FF;
+   padding: 25px;
+   font-size: 120%;
+   text-align: center;
 }
