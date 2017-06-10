@@ -98,10 +98,22 @@ for (var i = 0; i<5; i++){
    console.log (quiz6);
 }
 
-var quiz7 = prompt ('Can you guess what states Dianna has traveled to for work?');
+var quiz7 = prompt ('Can you guess a state Dianna has traveled to for work?');
 console.log (quiz7);
 var states = ['Illinois', 'Colorado', 'Florida', 'Minnesota', 'Pennsylvania'];
+console.log (states);
 
+while (quiz7 != states ){
+   if (quiz7 = states) {
+       alert ('Wild and correct guess!');
+       quizScore++
+       break;
+	 } else {
+   		alert ('I know lots of states to pick a guess from.  Keep trying')
+   }
+   quiz6 = prompt ('Can you guess how many times Dianna has moved In her lifetime?');
+   console.log (quiz6);
+}
 
 
 
