@@ -74,3 +74,24 @@ document.write(
      +
    "</ol>"
 );
+
+
+
+/* psuedo code for lab 3 as follows:
+
+questions [(0), (1), (3), (4), (5), (6), (7)];
+answers [(0), (1), (2), (7)];
+
+Dianna remember
+   git add . --to Add
+   git commit -m 'with notes about what your pushing or why, think what changes have you made'
+   git push origin -- this will push to your origin link you've already created
+   git status -- should you ever be lost
+
+q6 will be 'Can you guess how many times I've moved in my lifetime?'
+q6a 'I know right! Really though I\'ve only moved 9 times within 2 states.'
+
+print each question aftr it\'s been answered with the question and answer.
+
+will launch links in between each html file
+*/
