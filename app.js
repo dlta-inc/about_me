@@ -26,7 +26,14 @@ var quiz = [
       n: 'Sad face!  She loves all things Harry Potter, Ms. Peregrines home for pecular children.  She prefers the book version over the movie any day of the week.'},
    {q: 'Is Dianna\'s favorite food sushi?',
       y: 'She is a fan of sushi, but it\'s not her favorite.  Pad thai with extra limes always wins.  Yes she acknowledges it\'s weird.',
-      n: guestName + ' your correct!  Everyone knows she loves pad thai with extra limes!  Weird I know right.'}
+      n: guestName + ' your correct!  Everyone knows she loves pad thai with extra limes!  Weird I know right.'},
+   {q: 'Can you guess how many times Dianna has moved In her lifetime?',
+      y: 'How\'d you know?!?  Yes Dianna\'s moved 9 times.',
+      n1: 'Try Again! You might want to guess higher',
+      n2: 'Not quite, try guessing lower.'},
+   {q: 'Can you guess a state Dianna has traveled to for work?',
+      y: 'Wild and correct guess!',
+      n: 'I know lots of states to pick a guess from.  Keep trying.'}
 ]
 console.log (quiz);
 
@@ -80,65 +87,46 @@ if (quizQ5 === 'Y') {
     alert (quiz[4].n);
 }
 
-var quiz6 = prompt ('Can you guess how many times Dianna has moved In her lifetime?');
+var quiz6 = prompt (quiz[5].q);
 console.log (quiz6);
 var i = 0
 
 for (var i = 0; i<5; i++){
    if (quiz6 <=8) {
-       alert ('Try Again! You might want to guess higher');
+       alert (quiz[5].n1);
    } else if (quiz6 >=10) {
-       alert ('Not quite, try guessing lower.');
+       alert (quiz[5].n2);
 	 } else {
-   		alert ('How\'d you know?!?  Yes Dianna\'s moved 9 times.')
+   		alert (quiz[5].y);
          quizScore++
+         console.log (quizScore);
          break;
    }
-   quiz6 = prompt ('Can you guess how many times Dianna has moved In her lifetime?');
+   quiz6 = prompt (quiz[5].q);
    console.log (quiz6);
 }
 
-var quiz7 = prompt ('Can you guess a state Dianna has traveled to for work?');
+var quiz7 = prompt (quiz[6].q);
 console.log (quiz7);
-var states = ['Illinois', 'Colorado', 'Florida', 'Minnesota', 'Pennsylvania'];
+var states = ['ILLINOIS', 'COLORADO', 'FLORIDA', 'MINNESOTA', 'PENNSYLVANIA'];
 console.log (states);
 
-while (quiz7 != states ){
-   if (quiz7 = states) {
-       alert ('Wild and correct guess!');
+for (var i = 0; i<5; i++){
+   if (quiz7 = states[0] || states[1] || states[2] || states[3] || states[4]) {
+       alert (quiz[6].y);
        quizScore++
+       console.log (quizScore);
        break;
 	 } else {
-   		alert ('I know lots of states to pick a guess from.  Keep trying')
+   		alert (quiz[6].n)
    }
-   quiz6 = prompt ('Can you guess how many times Dianna has moved In her lifetime?');
-   console.log (quiz6);
+   quiz7 = prompt (quiz[6].q);
+   console.log (quiz7);
 }
 
 
 
-
-var quizScoreResult = (quizScore/7*100);
-//
-// document.write (quiz[0].q + quiz[0].yes);
-// document.write (quiz[1].q + quiz[0].yes);
-// document.write (quiz[2].q + quiz[0].yes);
-// document.write (quiz[3].q + quiz[0].yes);
-// document.write (quiz[4].q + quiz[0].no);
-
-
-// {q: 'Can you guess how many times I\'ve moved in my lifetime?', a: '9'},
-// {q: 'What is one of Dianna\'s favorite Disney movies?', a: 'Beauty and the Beast'}
-
-// var quizQuestions = ['Does Dianna love the color purple?', 'Does Dianna have more than 1 dog?', 'Is Dianna fluent in 2 languages and learning others?', 'Is Dianna a fan of all things fantasy?', 'Is Dianna\'s favorite food sushi?', 'Can you guess how many times I\'ve moved in my lifetime?', 'What is one of Dianna\'s favorite Disney movies?'];
-// console.log (quizQuestions);
-//
-// var quizQandA = ['Y', 'N', '9', ('Beauty and the Beast', 'The Little Mermaid', 'Moana', 'Cinderella')];
-// console.log (quizQandA);
-// var alerts = ['', '', '', '', '', '', '', '', '', '', '', '', '', ''];
-//
-// var elQue = document.getElementById (quizQuestions(0));
-/* original code for lab 2:
+/* ............................ORIGINAL CODE FOR LAB 2.................................................
 var quizQ1 = prompt ('Does Dianna love the color purple?').toUpperCase();
 console.log(quizQ1);
 if (quizQ1 === 'Y') {
@@ -206,10 +194,28 @@ document.write(
 
 
 /* psuedo code for lab 3 as follows:
+var quizScoreResult = (quizScore/7*100);
+
+document.write (quiz[0].q + quiz[0].yes);
+document.write (quiz[1].q + quiz[0].yes);
+document.write (quiz[2].q + quiz[0].yes);
+document.write (quiz[3].q + quiz[0].yes);
+document.write (quiz[4].q + quiz[0].no);
+
+.....PUTTING ALL QUESTIONS IN AN ARRAY OPTIONS....
+{q: 'Can you guess how many times I\'ve moved in my lifetime?', a: '9'},
+{q: 'What is one of Dianna\'s favorite Disney movies?', a: 'Beauty and the Beast'}
+
+var quizQuestions = ['Does Dianna love the color purple?', 'Does Dianna have more than 1 dog?', 'Is Dianna fluent in 2 languages and learning others?', 'Is Dianna a fan of all things fantasy?', 'Is Dianna\'s favorite food sushi?', 'Can you guess how many times I\'ve moved in my lifetime?', 'What is one of Dianna\'s favorite Disney movies?'];
+
+var quizQandA = ['Y', 'N', '9', ('Beauty and the Beast', 'The Little Mermaid', 'Moana', 'Cinderella')];
+
+var elQue = document.getElementById (quizQuestions(0));
 
 questions [(0), (1), (3), (4), (5), (6), (7)];
 answers [(0), (1), (2), (7)];
 
+...... COMMAND LINE REMEMBERALS......
 Dianna remember
    git add . --to Add
    git commit -m 'with notes about what your pushing or why, think what changes have you made'

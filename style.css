@@ -1,5 +1,4 @@
 * {
-   background-color: black;
    margin: 0;
    padding: 0;
 }z
@@ -26,7 +25,21 @@ p {
 #navbar {
    background-color: white;
    display: inline;
-   
+   text-align: center;
    padding: 5%; 0; 5%; 0;
 
+}
+
+#vacaBucketList {
+   margin: 10%;
+   border: solid black 10px;
+   padding: 5%;
+   background-color: FFA5E2;
+}
+
+#experience {
+   margin: 10%;
+   border: solid black 10px;
+   padding: 5%;
+   color: FFA5E2;
 }
