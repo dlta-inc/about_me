@@ -124,6 +124,22 @@ for (var i = 0; i<5; i++){
    console.log (quiz7);
 }
 
+var quizScoreResult = Math.round((quizScore/7*100));
+console.log (quizScoreResult + '%');
+
+document.write(guestName + ' Thank you for playing!  Your quiz score is ' + quizScoreResult + '%.  All the questions and answers to the quiz are as follows:');
+document.write(
+"<ol>"
+   + "<li>" + quiz[0].q + "</li>"
+   + "<li>" + quiz[1].q + "</li>"
+   + "<li>" + quiz[2].q + "</li>"
+   + "<li>" + quiz[3].q + "</li>"
+   + "<li>" + quiz[4].q + "</li>"
+   + "<li>" + quiz[5].q + "</li>"
+   + "<li>" + quiz[6].q + "</li>"
+   +
+   "</ol>"
+);
 
 
 /* ............................ORIGINAL CODE FOR LAB 2.................................................
@@ -193,7 +209,7 @@ document.write(
 ); */
 
 
-/* psuedo code for lab 3 as follows:
+/*...................PSUEDO CODE FOR LAB 3 ...........
 var quizScoreResult = (quizScore/7*100);
 
 document.write (quiz[0].q + quiz[0].yes);
@@ -227,5 +243,4 @@ q6a 'I know right! Really though I\'ve only moved 9 times within 2 states.'
 
 print each question aftr it\'s been answered with the question and answer.
 
-will launch links in between each html file
-*/
+will launch links in between each html file*/
